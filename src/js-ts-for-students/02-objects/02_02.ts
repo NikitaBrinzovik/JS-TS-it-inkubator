@@ -8,6 +8,7 @@ export type TypeAddress = {
 }
 
 export type TypeHouses = {
+    id?: number
     buildAt: number
     repaired: boolean
     address: TypeAddress
@@ -16,7 +17,14 @@ export type TypeHouses = {
 export type CityType = {
     title: string
     houses: Array<TypeHouses>
-    governmentBuildings: Array<string>
+    governmentBuildings: Array<TypeGovermentB>
     citizensNumber: number
 
+}
+
+export type TypeGovermentB = {
+    type: string
+    address: TypeStreet
+    // number: number
+    staffCount: number
 }

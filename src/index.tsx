@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {slitInToWords} from "./01-hello-test/01";
+import {slitInToWords} from "./js-ts-for-students/01-hello-test/01";
 
 ReactDOM.render(
   <React.StrictMode>

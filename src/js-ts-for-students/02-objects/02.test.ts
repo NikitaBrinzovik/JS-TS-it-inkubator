@@ -19,7 +19,20 @@ beforeEach(() => {
                 buildAt: 2020, repaired: true,
                 address: {number: 1000, street: {title: 'White street'}}
             }],
-        governmentBuildings: [],
+        governmentBuildings: [
+            {
+                type: "HOSPITAL",
+                address: {title: "Central Str"},
+                //number: 12
+                staffCount: 280,
+            },
+            {
+                type: "FIRE-STATION",
+                address: {title: "South Str"},
+                //number: 12
+                staffCount: 1000,
+            }
+        ],
         citizensNumber: 1000000,
     }
 })
