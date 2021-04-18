@@ -15,8 +15,8 @@ type LocalCityType = {
     country: string
 }
 
-type StudentType = {
-
+export type StudentType = {
+    id: number
     name: string
     age: number
     isActive: boolean
@@ -26,6 +26,7 @@ type StudentType = {
 }
 
 const student: StudentType = {
+    id: 1,
     name: "Nikita",
     age: 29,
     isActive: true,
