@@ -21,13 +21,13 @@ city = {
         {
             type: "HOSPITAL",
             address: {title: "Central Str"},
-            number: 12,
+            //number: 12,
             staffCount: 280
         },
         {
             type: "FIRE-STATION",
             address: {title: "South Str"},
-            number: 12,
+            //number: 12,
             staffCount: 1000
         }
     ],
