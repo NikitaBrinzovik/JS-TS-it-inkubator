@@ -1,6 +1,3 @@
-
-
-
 const tlID_1 = "34jf-76kg"//v1
 const tlID_2 = "34jf-jjkg"//v1
 
@@ -81,7 +78,7 @@ function findAlex(acc, el) { // с помощью редьюс найдём об
     if (el.name === "Alex") {acc = el}
     return acc
 }
-console.log(students2.reduce(findAlex, null)) //import students from main2.js
+console.log(students2.reduce(findAlex, null))
 //если будет несколько алексов, вернёт последнего
 
 function getBestStudents(acc, el) {
