@@ -5,7 +5,7 @@ export type ManType = {
     lastName?: string
 }
 
-export let people: Array<ManType> = [
+let people: Array<ManType> = [
     {name: "Andrew Ivanov", age: 33},
     {name: "Alexander Petrov", age: 24},
     {name: "Dmitry Sidorov", age: 18},
@@ -51,6 +51,6 @@ const messages = people.map(
         `Hello ${man.name.split(' ')[0]}.
          Welcome to IT-Incubator`)
 
-const createGreatingMessages = (people: Array<ManType>) => {
+export const createGreetingMessages = (people: Array<ManType>) => {
     people.map(man => `Hello ${man.name.split(' ')[0]}. Welcome to IT-Incubator`)
 }

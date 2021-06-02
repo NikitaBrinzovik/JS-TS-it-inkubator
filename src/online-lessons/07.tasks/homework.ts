@@ -5,7 +5,7 @@ export type StudentType = {
     scores:number
 }
 
-let students:Array<StudentType> = [
+export let students:Array<StudentType> = [
     {
         name: "Bob",
         age: 22,
@@ -32,7 +32,7 @@ let students:Array<StudentType> = [
     },
 ];
 
-const addFriends = (students:Array<StudentType>):Array<StudentType> => {
+export const addFriends = (students:Array<StudentType>):Array<StudentType> => {
 
     const stNames = students.map(st => st.name)
 

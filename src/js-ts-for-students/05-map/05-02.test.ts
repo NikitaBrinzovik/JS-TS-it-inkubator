@@ -1,7 +1,7 @@
 import {CityType} from "../02-objects/02_02";
-import {deleteHousesOnTheStreet, getBuildingWithStaffCountMoreThen} from "../04-filter/04_02";
+import {createMessages, getStreetsGovBuildngs, getStreetTittlesOfHouses} from "./05-02";
 
-let city:CityType
+let city:CityType;
 city = {
     title: 'New-York',
     houses: [
@@ -35,18 +35,29 @@ city = {
 }
 
 test("list of names gover-buldings", () => {
-    deleteHousesOnTheStreet(city, "Happy street")
+    let streetNames= getStreetsGovBuildngs(
+        city.governmentBuildings
+    )
 
-    expect(city.houses.length).toBe(2)
-    expect(city.houses[0].id).toBe(1)
+    expect(streetNames.length).toBe(2)
+    expect(streetNames[0]).toBe("Central Str")
+    expect(streetNames[1]).toBe("South Str")
 })
 
-test("buildingss with correct staff count", () => {
-    let buildings =
-        getBuildingWithStaffCountMoreThen(
-            city.governmentBuildings,
-            500)
+test("list of street titles", () => {
+    let streets = getStreetTittlesOfHouses(city.houses)
 
-    expect(buildings.length).toBe(1)
-    expect(buildings[0].type).toBe("FIRE-STATION")
+    expect(streets.length).toBe(3)
+    expect(streets[0]).toBe('White street')
+    expect(streets[1]).toBe('Happy street')
+    expect(streets[2]).toBe('White street')
+})
+
+test ("creat greeting", () => {
+    let messages = createMessages(city.houses)
+
+    expect(messages.length).toBe(3);
+    expect(messages[0]).toBe("Hello to White street")
+    expect(messages[1]).toBe("Hello to Happy street")
+    expect(messages[2]).toBe("Hello to White street")
 })
