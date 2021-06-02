@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {slitInToWords} from "./js-ts-for-students/01-hello-test/01";
+import {User} from "./js-ts-for-students/06-callback/callback";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <User />
   </React.StrictMode>,
   document.getElementById('root')
 );
