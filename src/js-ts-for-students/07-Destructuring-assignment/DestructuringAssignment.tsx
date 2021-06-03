@@ -1,3 +1,4 @@
+import {useState} from "react";
 
 
 type LessonType = {
@@ -20,18 +21,54 @@ type PropsType = {
 
 }
 
-export const ManComponents: React.FC<PropsType> = (props) => {
+let proops = {
+    name: "Nick",
+    age: 29,
+    lessons: [{title: "1"}, {title: "2"},],
+    address:{
+        street:{
+            title:"ssssss street"
+        }
+    }
+}
+export const ManComponents: React.FC<PropsType> = (proops) => {
     // const {title} = props;
     // const {name} = props.man;
-    const {title, man:{name}} = props;
+    const {title, man:{name}} = proops;
 
 
 
     return <div>
-        <h1>{props.title}</h1>
+        <h1>{title}</h1>
         <hr/>
         <div>
-            {props.man.name}
+            {name}
+            {proops.man.age}
         </div>
+    </div>
+}
+
+const PrimerComp: React.FC<PropsType> = ({title, ...proops}) => {
+    return <div>
+        {title}
+        {proops.man}//через остаточные парам-ры
+    </div>
+}
+const Primer2Comp: React.FC<PropsType> = (proops) => {
+    const {man, ...restProps} = proops//дали имя остаточным парам
+    return <div>
+        {restProps.title}
+        {man}
+    </div>
+}
+
+const Primer3Comp: React.FC<PropsType> = (proops) => {
+    const {man, ...restProps} = proops//дали имя остаточным парам
+
+    const [message, setMessage] = useState<string>("hello")
+
+    return <div>
+        {restProps.title}
+        {man}
     </div>
 }
