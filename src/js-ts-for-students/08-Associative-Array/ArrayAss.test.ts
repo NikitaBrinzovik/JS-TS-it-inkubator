@@ -25,5 +25,4 @@ test("shoud delete user", () => {
     delete users["101"]
 
     expect(users["101"]).toBeUndefined()
-    expect(users["104"]).toBe("N")
 })
