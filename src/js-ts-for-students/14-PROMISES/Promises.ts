@@ -4,6 +4,10 @@
     name: string
     friend: number
 }*/
+
+
+// CATCH, TRY-CATCH, ASYNC-AWAIT
+
 const axios = {
     _fake(url:string, data:any) {
         return new Promise((resolve) =>{
@@ -173,5 +177,7 @@ async function run () {
     console.log(3)
 }
 run();
+
+
 
 
